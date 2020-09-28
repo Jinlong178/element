@@ -3,8 +3,8 @@ const global = {
 }
 // 开发环境
 const development = {
-  baseURL: 'http://localhost:9201/hd', // API接口基本路径
-  name: '货代客户管理平台', // 系统名称
+  baseURL: 'http://localhost:9203/demo', // API接口基本路径
+  name: '测试demo', // 系统名称
   global,
 }
 // 生产环境
