@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div style="text-align: center;left: 50%;margin-top: 15%"></div>
+<script>
+    let baseUrl = window.location.href;
+    let code=decodeURIComponent((new RegExp('[?|&]code=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [, ''])[1].replace(/\+/g, '%20')) || null
+    let state=decodeURIComponent((new RegExp('[?|&]state=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [, ''])[1].replace(/\+/g, '%20')) || null
+    let reg0 = /([?][^?]+)$/;
+    baseUrl = baseUrl.replace(reg0, "");
+    let reg = /([/][^/]+)$/;
+    baseUrl = baseUrl.replace(reg, "");
+    if("jsRecord"==state){
+      window.location.href=baseUrl+"/jsRecord?code="+code;
+    }else if("campusIndex"==state){
+      window.location.href=baseUrl+"/campusIndex?code="+code;
+    }
+</script>
+</body>
+</html>
